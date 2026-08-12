@@ -1,0 +1,265 @@
+/* ===== RESET E BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    padding: 2rem 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #faf9f8;
+    color: #1e1e1e;
+    transition: font-size 0.2s ease;
+}
+
+/* ===== TIPOGRAFIA BASE (controlada via JS) ===== */
+body {
+    font-size: 1rem;
+}
+body.size-small {
+    font-size: 0.85rem;
+}
+body.size-medium {
+    font-size: 1rem;
+}
+body.size-large {
+    font-size: 1.25rem;
+}
+body.size-xlarge {
+    font-size: 1.6rem;
+}
+
+/* ===== TÍTULOS E TEXTOS ===== */
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 0.3rem;
+    color: #0a2b4e;
+}
+h2 {
+    font-size: 1.8em;
+    margin: 1.5rem 0 0.5rem 0;
+    color: #0a2b4e;
+    border-bottom: 3px solid #d0d7de;
+    padding-bottom: 0.3rem;
+}
+.subhead {
+    font-size: 1.1em;
+    color: #2c3e50;
+    margin-bottom: 1.2rem;
+    max-width: 750px;
+}
+
+/* ===== BOTÕES ===== */
+.btn {
+    display: inline-block;
+    background: #0a2b4e;
+    color: white;
+    padding: 0.6rem 1.4rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+    border: 2px solid transparent;
+    transition: background 0.2s, border-color 0.2s, transform 0.1s;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.btn:hover,
+.btn:focus-visible {
+    background: #1d4b77;
+    border-color: #ffb347;
+    outline: 2px solid #ffb347;
+    outline-offset: 2px;
+    transform: scale(1.02);
+}
+.btn:focus-visible {
+    outline: 3px solid #ffb347;
+}
+
+/* ===== CONTROLES DE TAMANHO ===== */
+.size-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1rem 0 0.8rem;
+}
+.size-btn {
+    background: #e8eaed;
+    border: 2px solid #b0b8c4;
+    border-radius: 40px;
+    padding: 0.5rem 1.3rem;
+    font-weight: 600;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+    color: #1e1e1e;
+    font-family: inherit;
+}
+.size-btn:hover {
+    background: #d0d7de;
+    border-color: #7a8a9e;
+}
+.size-btn:focus-visible {
+    outline: 3px solid #005a9c;
+    outline-offset: 2px;
+}
+.size-btn[aria-pressed="true"] {
+    background: #0a2b4e;
+    border-color: #0a2b4e;
+    color: white;
+    box-shadow: 0 2px 8px rgba(10, 43, 78, 0.3);
+}
+.current-size {
+    font-weight: 500;
+    background: #f0f2f5;
+    padding: 0.4rem 1rem;
+    border-radius: 40px;
+    display: inline-block;
+    margin-top: 0.2rem;
+}
+#current-size-label {
+    font-weight: 700;
+    color: #0a2b4e;
+}
+
+/* ===== GRID DOS PRINCÍPIOS ===== */
+.principios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 1.8rem 0 1.5rem;
+}
+.principio-card {
+    background: white;
+    padding: 1.3rem 1rem 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    border-left: 6px solid #0a2b4e;
+    transition: box-shadow 0.25s, transform 0.15s;
+    cursor: default;
+}
+.principio-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+    transform: translateY(-3px);
+}
+.principio-card:focus-visible {
+    outline: 3px solid #005a9c;
+    outline-offset: 4px;
+    border-radius: 20px;
+}
+.principio-num {
+    font-weight: 700;
+    font-size: 1.1em;
+    letter-spacing: 0.5px;
+    color: #0a2b4e;
+    display: block;
+    margin-bottom: 0.3rem;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.3rem;
+}
+.principio-desc {
+    font-size: 0.95em;
+    color: #1e293b;
+}
+
+/* ===== VÍDEO SIMBÓLICO ===== */
+.video-container {
+    background: #1a2634;
+    border-radius: 24px;
+    padding: 1.2rem 1.2rem 0.8rem;
+    max-width: 650px;
+    margin: 1.2rem 0 0.5rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+.video-placeholder {
+    background: #2d3a47;
+    border-radius: 16px;
+    padding: 2.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: #d8e0e8;
+    text-align: center;
+    min-height: 120px;
+    border: 1px solid #4a5a6a;
+}
+.play-icon {
+    font-size: 2.8rem;
+    line-height: 1;
+    color: #ffb347;
+}
+.video-label {
+    font-weight: 500;
+    font-size: 1em;
+}
+.caption-bar {
+    background: #0d1b2a;
+    border-radius: 40px;
+    padding: 0.6rem 1.2rem;
+    margin-top: 0.8rem;
+    text-align: center;
+    border: 1px solid #3a4c5e;
+}
+.caption-text {
+    color: #f0f4fa;
+    font-size: 0.9em;
+    font-style: italic;
+    letter-spacing: 0.3px;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #d0d7de;
+    color: #3d4f61;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 600px) {
+    body {
+        padding: 1.2rem 0.8rem;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    .principios-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .btn {
+        display: block;
+        width: fit-content;
+    }
+    .size-controls {
+        gap: 0.4rem;
+    }
+    .size-btn {
+        padding: 0.4rem 1rem;
+        font-size: 0.85em;
+    }
+}
+@media (max-width: 420px) {
+    .principios-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== MELHORIA PARA LEITORES DE TELA ===== */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}

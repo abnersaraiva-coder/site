@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="font-media">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acesso+ | Acessibilidade Digital</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-container">
+      <div class="brand">
+        <span class="brand-sub">ACESSIBILIDADE DIGITAL</span>
+        <h1 class="logo">Acesso+</h1>
+      </div>
+      <nav class="nav">
+        <a href="#inicio" class="nav-link active">Início</a>
+        <a href="#principios" class="nav-link">Princípios</a>
+        <a href="#video" class="nav-link">Vídeo</a>
+        <a href="#duvidas" class="nav-link">Dúvidas</a>
+        <a href="#tamanho" class="nav-link">Tamanho</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <section id="inicio" class="hero">
+      <h2 class="hero-title">A web deve funcionar para todos</h2>
+      <p class="hero-description">
+        Este site mostra como resolver os problemas mais comuns de acessibilidade: falta de legendas, fontes fixas, textos difíceis e ausência de navegação por teclado.
+      </p>
+      <div class="hero-buttons">
+        <a href="#principios" class="btn btn-primary">Ver princípios</a>
+        <a href="#video" class="btn btn-secondary">Vídeo com legendas</a>
+      </div>
+    </section>
+
+    <section id="tamanho" class="card-tamanho">
+      <h3>Tamanho do texto</h3>
+      <p>Escolha o tamanho da letra que é mais confortável para você. A página toda vai se adaptar.</p>
+      
+      <div class="btn-group-tamanho">
+        <button class="btn-size" data-size="pequena">Pequena</button>
+        <button class="btn-size active" data-size="media">Média</button>
+        <button class="btn-size" data-size="grande">Grande</button>
+        <button class="btn-size" data-size="muito-grande">Muito grande</button>
+      </div>
+
+      <p class="status-tamanho">Tamanho atual: <strong id="tamanho-atual">Média</strong></p>
+    </section>
+
+    <section id="principios" class="principios-section">
+      <h2 class="section-title">Quatro princípios essenciais</h2>
+      <p class="section-subtitle">
+        Seguir estes princípios garante que seu site funcione para o maior número de pessoas.
+      </p>
+
+      <div class="cards-grid">
+        <div class="card-principio">
+          <span class="principio-tag">PRINCÍPIO 01</span>
+          <h3>Perceptível</h3>
+          <p>As informações e os componentes da interface devem ser apresentados em formas que os usuários possam perceber.</p>
+        </div>
+
+        <div class="card-principio">
+          <span class="principio-tag">PRINCÍPIO 02</span>
+          <h3>Operável</h3>
+          <p>Os componentes de interface e a navegação devem ser operáveis por qualquer meio, como teclado ou leitores de tela.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
